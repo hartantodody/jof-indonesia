@@ -21,9 +21,13 @@ const ClientDesktop = () => {
     hidden: { opacity: 0, x: -50 },
     visible: { opacity: 1, x: 0 },
   };
+  const variants2 = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0 },
+  };
 
-  const staggerDelay = 0.2; // Adjust this value for the desired delay between images
-  const transitionDuration = 1.5; // Adjust this value for the desired transition duration
+  const staggerDelay = 0.2;
+  const transitionDuration = 1.5;
 
   return (
     <section className='flex flex-col justify-center items-center px-[152px] py-[79px]'>
@@ -84,7 +88,7 @@ const ClientDesktop = () => {
         ref={ref}
         initial='hidden'
         animate={inView ? "visible" : "hidden"}
-        variants={variants}
+        variants={variants2}
         className='flex flex-wrap justify-center items-center flex-row gap-[127px]'
       >
         <motion.img
@@ -92,8 +96,8 @@ const ClientDesktop = () => {
           alt=''
           className='max-w-full'
           variants={{
-            ...variants,
-            visible: { ...variants.visible, transition: { delay: staggerDelay * 6, duration: transitionDuration } },
+            ...variants2,
+            visible: { ...variants2.visible, transition: { delay: staggerDelay * 6, duration: transitionDuration } },
           }}
         />
         <motion.img
@@ -101,8 +105,8 @@ const ClientDesktop = () => {
           alt=''
           className='max-w-full'
           variants={{
-            ...variants,
-            visible: { ...variants.visible, transition: { delay: staggerDelay * 7, duration: transitionDuration } },
+            ...variants2,
+            visible: { ...variants2.visible, transition: { delay: staggerDelay * 7, duration: transitionDuration } },
           }}
         />
         <motion.img
@@ -110,8 +114,8 @@ const ClientDesktop = () => {
           alt=''
           className='max-w-full'
           variants={{
-            ...variants,
-            visible: { ...variants.visible, transition: { delay: staggerDelay * 8, duration: transitionDuration } },
+            ...variants2,
+            visible: { ...variants2.visible, transition: { delay: staggerDelay * 8, duration: transitionDuration } },
           }}
         />
         <motion.img
@@ -119,8 +123,8 @@ const ClientDesktop = () => {
           alt=''
           className='max-w-full'
           variants={{
-            ...variants,
-            visible: { ...variants.visible, transition: { delay: staggerDelay * 9, duration: transitionDuration } },
+            ...variants2,
+            visible: { ...variants2.visible, transition: { delay: staggerDelay * 9, duration: transitionDuration } },
           }}
         />
         <motion.img
@@ -128,8 +132,8 @@ const ClientDesktop = () => {
           alt=''
           className='max-w-full'
           variants={{
-            ...variants,
-            visible: { ...variants.visible, transition: { delay: staggerDelay * 10, duration: transitionDuration } },
+            ...variants2,
+            visible: { ...variants2.visible, transition: { delay: staggerDelay * 10, duration: transitionDuration } },
           }}
         />
       </motion.div>
