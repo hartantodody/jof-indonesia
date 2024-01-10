@@ -1,4 +1,4 @@
-import { ClientDesktop, NavbarDesktop } from "../../components";
+import { AboutUs, AboutUs2, ClientDesktop, NavbarDesktop } from "../../components";
 import { Hero } from "../../container";
 
 const HomePage = () => {
@@ -7,6 +7,8 @@ const HomePage = () => {
       <NavbarDesktop />
       <Hero />
       <ClientDesktop />
+      <AboutUs />
+      <AboutUs2 />
     </>
   );
 };
