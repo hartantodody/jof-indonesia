@@ -4,3 +4,8 @@ export { default as ReelsDesktop } from "./ReelsDesktop";
 export { default as ClientDesktop } from "./ClientDesktop";
 export { default as AboutUs } from "./AboutUs";
 export { default as AboutUs2 } from "./AboutUs2";
+export { default as OurServices } from "./OurServices";
+export { default as Card } from "./Card";
+export { default as EventOrganizer } from "./EventOrganizer";
+export { default as EventProduction } from "./EventProduction";
+export { default as Footer } from "./Footer";

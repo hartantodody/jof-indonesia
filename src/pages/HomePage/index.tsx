@@ -1,4 +1,4 @@
-import { AboutUs, AboutUs2, ClientDesktop, NavbarDesktop } from "../../components";
+import { AboutUs, AboutUs2, ClientDesktop, NavbarDesktop, OurServices, Footer } from "../../components";
 import { Hero } from "../../container";
 
 const HomePage = () => {
@@ -9,6 +9,8 @@ const HomePage = () => {
       <ClientDesktop />
       <AboutUs />
       <AboutUs2 />
+      <OurServices />
+      <Footer />
     </>
   );
 };

@@ -10,6 +10,8 @@ export default {
         body: "#6C6C6C",
         caption: "#232323",
         background: "#090909",
+        cardbg: "#292929",
+        textservice: "#DFDFDF",
       },
       fontFamily: {
         "plus-jakarta-sans": ["PlusJakartaSans", "sans-serif"],

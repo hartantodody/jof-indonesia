@@ -1,0 +1,25 @@
+<svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 13L14 5" stroke="white" stroke-width="1.4"/>
+<path d="M23 13L15 5" stroke="white" stroke-width="1.4"/>
+<path d="M5 13L1 9" stroke="white" stroke-width="1.4"/>
+<path d="M40 13L32 5" stroke="white" stroke-width="1.4"/>
+<path d="M23 13L31 5" stroke="white" stroke-width="1.4"/>
+<path d="M41 13L45 9" stroke="white" stroke-width="1.4"/>
+<rect x="1" y="13" width="8" height="24" stroke="white"/>
+<rect x="37" y="13" width="8" height="24" stroke="white"/>
+<rect width="44" height="8" transform="matrix(1 0 0 -1 1 13)" stroke="white"/>
+<path d="M1 37L9 29" stroke="white" stroke-width="1.4"/>
+<path d="M1 37L9 29" stroke="white" stroke-width="1.4"/>
+<path d="M37 29L45 21" stroke="white" stroke-width="1.4"/>
+<path d="M1 21L9 13" stroke="white" stroke-width="1.4"/>
+<path d="M45 37L37 29" stroke="white" stroke-width="1.4"/>
+<path d="M9 29L1 21" stroke="white" stroke-width="1.4"/>
+<path d="M45 21L37 13" stroke="white" stroke-width="1.4"/>
+<rect x="11" y="26" width="24" height="10" fill="url(#paint0_linear_378_30044)"/>
+<defs>
+<linearGradient id="paint0_linear_378_30044" x1="37.661" y1="56" x2="3.61476" y2="43.7449" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFC200"/>
+<stop offset="1" stop-color="#00A650"/>
+</linearGradient>
+</defs>
+</svg>

@@ -60,7 +60,7 @@ const AboutUs2 = () => {
               visible: { ...variants2.visible, transition: { delay: staggerDelay * 2, duration: transitionDuration } },
             }}
           >
-            Client Evolve their events
+            Client Evolve Their Events
           </motion.h4>
           <motion.p
             className='text-xl text-title max-w-[300px]'
