@@ -44,7 +44,7 @@ const Carousel = ({ imageData }: { imageData: ImageCarouselProps[] }) => {
                   key={index}
                   onClick={() => switchImage(index)}
                   className={`h-3 w-3 bg-white rounded-full focus:outline-none transition-all duration-300 ${
-                    index === currentImage ? "opacity-100 w-10" : "opacity-50"
+                    index === currentImage ? "opacity-100 w-9" : "opacity-50"
                   }`}
                 />
               ))}
