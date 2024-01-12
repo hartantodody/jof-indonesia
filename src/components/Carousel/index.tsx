@@ -33,7 +33,6 @@ const Carousel = ({ imageData }: { imageData: ImageCarouselProps[] }) => {
             }`}
           >
             <img src={src} alt={`Image ${index + 1}`} className='w-full h-full object-cover' />
-            <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
             <div className='absolute bottom-0 left-0 w-full h-70 p-10 text-white bg-black bg-opacity-50'>
               <h2 className='text-2xl md:text-3xl lg:text-3xl font-bold'>{title}</h2>
               <p className='text-sm md:text-base lg:text-base'>{description}</p>
