@@ -1,5 +1,5 @@
 import { AboutUs, AboutUs2, ClientDesktop, NavbarDesktop, OurServices, Footer } from "../../components";
-import { Hero } from "../../container";
+import { Hero, LatestWork } from "../../container";
 
 const HomePage = () => {
   return (
@@ -10,6 +10,7 @@ const HomePage = () => {
       <AboutUs />
       <AboutUs2 />
       <OurServices />
+      <LatestWork />
       <Footer />
     </>
   );

@@ -9,3 +9,4 @@ export { default as Card } from "./Card";
 export { default as EventOrganizer } from "./EventOrganizer";
 export { default as EventProduction } from "./EventProduction";
 export { default as Footer } from "./Footer";
+export { default as Carousel } from "./Carousel";
