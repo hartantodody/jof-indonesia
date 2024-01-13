@@ -1,9 +1,10 @@
-import { AboutUsDetails, Footer, NavbarDesktop, OurPartner, OurTeam } from "../../components";
+import { AboutUsDetails, Footer, OurPartner, OurTeam } from "../../components";
+import { Navbar } from "../../container";
 
 const AboutUsPage = () => {
   return (
     <>
-      <NavbarDesktop />
+      <Navbar />
       <AboutUsDetails />
       <OurTeam />
       <OurPartner />

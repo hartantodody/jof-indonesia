@@ -25,7 +25,6 @@ const NavbarDesktop = () => {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    padding: "0 128px",
     zIndex: 10,
     background: scrolled
       ? "linear-gradient(to bottom, rgba(0, 5, 3, 1), rgba(0, 5, 3, 1))"
@@ -45,9 +44,9 @@ const NavbarDesktop = () => {
   };
 
   return (
-    <nav style={navbarStyle}>
+    <nav style={navbarStyle} className='px-[64px] lg:px-[128px]'>
       <img className='w-[120px] cursor-pointer' src={JofLogo} alt='Jof Logo' />
-      <div className='font-plus-jakarta-sans text-white flex flex-row space-x-4 gap-[44px]'>
+      <div className='text-white flex flex-row justify-evenly gap-[44px]'>
         <motion.a href='#portfolio' style={linkStyle} whileHover={{ color: "#00A650" }}>
           Portfolio
           <motion.hr className='underline' style={{ ...linkStyle, ...hrVariants }}></motion.hr>

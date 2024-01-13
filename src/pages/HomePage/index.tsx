@@ -1,10 +1,10 @@
-import { AboutUs, AboutUs2, ClientDesktop, NavbarDesktop, OurServices, Footer } from "../../components";
-import { Hero, LatestWork } from "../../container";
+import { AboutUs, AboutUs2, ClientDesktop, OurServices, Footer } from "../../components";
+import { Hero, LatestWork, Navbar } from "../../container";
 
 const HomePage = () => {
   return (
     <>
-      <NavbarDesktop />
+      <Navbar />
       <Hero />
       <ClientDesktop />
       <AboutUs />
