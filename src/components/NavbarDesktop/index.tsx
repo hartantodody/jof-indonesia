@@ -56,7 +56,7 @@ const NavbarDesktop = () => {
           Services
           <motion.hr className='underline' style={{ ...linkStyle, ...hrVariants }}></motion.hr>
         </motion.a>
-        <motion.a href='#about' style={linkStyle} whileHover={{ color: "#00A650" }}>
+        <motion.a href='/about-us' style={linkStyle} whileHover={{ color: "#00A650" }}>
           About Us
           <motion.hr className='underline' style={{ ...linkStyle, ...hrVariants }}></motion.hr>
         </motion.a>

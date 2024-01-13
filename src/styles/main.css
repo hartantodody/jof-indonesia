@@ -32,7 +32,7 @@
   
   @font-face {
     font-family: 'PlusJakartaSans';
-    src: url('../assets/PlusJakartaSans-Bold.ttf') format('truetype');
+    src: url('../assets/fonts/PlusJakartaSans-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
   }
@@ -42,6 +42,10 @@
     src: url('../assets/fonts/PlusJakartaSans-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
+  }
+
+  :root {
+    --font-family: 'PlusJakartaSans', sans-serif;
   }
   
   .gradient-background {
@@ -53,7 +57,22 @@
     border-image-slice: 1;
     border-radius: 15px;
   }
+
+  .about-us-background {
+    background-image: url(bg-green-about-us.svg);
+    background-size: 1000px;
+    background-position: top right;
+    background-repeat: no-repeat;
+  }
   
+  @media screen and (max-width: 1023px) {
+    .about-us-background {
+      background-image: transparent;
+      background-size: 0;
+      background-position: none;
+      background-repeat: none;
+    }
+  }
   
   
   
