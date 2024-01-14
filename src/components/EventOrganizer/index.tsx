@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Card } from "..";
 import fullServiceIcon from "../../assets/images/full-service.svg";
 import eventPlanningIcon from "../../assets/images/event-planning.svg";
 import showManageIcon from "../../assets/images/show-manage.svg";

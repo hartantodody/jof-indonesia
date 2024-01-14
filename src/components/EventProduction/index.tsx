@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { Card } from "..";
 import fullPackageIcon from "../../assets/images/full-package.svg";
 import exhibitionIcon from "../../assets/images/exhibit-event.svg";
 import multimediaIcon from "../../assets/images/multimedia-event.svg";
