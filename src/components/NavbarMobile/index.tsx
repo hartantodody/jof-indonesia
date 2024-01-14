@@ -11,6 +11,10 @@ const NavbarMobile = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   const mobileNavStyle: React.CSSProperties = {
     height: isOpen ? "100vh" : "80px",
     width: "100%",
@@ -37,7 +41,7 @@ const NavbarMobile = () => {
   return (
     <nav style={mobileNavStyle}>
       <div className={`w-[100%] flex items-center justify-between px-10 ${isOpen ? "py-[50px]" : ""}`}>
-        <Link to='/' className='w-[120px] cursor-pointer'>
+        <Link to='/' className='w-[120px] cursor-pointer' onClick={closeMenu}>
           <img src={JofLogo} alt='Jof Logo' />
         </Link>
         <img
@@ -49,16 +53,16 @@ const NavbarMobile = () => {
         />
       </div>
       <div style={{ display: isOpen ? "flex" : "none", flexDirection: "column", alignItems: "center" }}>
-        <Link to='/portfolio' style={mobileLinkStyle}>
+        <Link to='/portfolio' style={mobileLinkStyle} onClick={closeMenu}>
           Portfolio
         </Link>
-        <a href='#services' style={mobileLinkStyle}>
+        <a href='#services' style={mobileLinkStyle} onClick={closeMenu}>
           Services
         </a>
-        <Link to='/about-us' style={mobileLinkStyle}>
+        <Link to='/about-us' style={mobileLinkStyle} onClick={closeMenu}>
           About Us
         </Link>
-        <a href='#contact' style={mobileLinkStyle}>
+        <a href='#contact' style={mobileLinkStyle} onClick={closeMenu}>
           Contact
         </a>
       </div>
