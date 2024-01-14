@@ -1,55 +1,62 @@
-import { useState, useEffect, useRef } from "react";
-import { ImageCarouselProps } from "../../interfaces/interface";
+import { useState, useEffect } from "react";
+import { imageList } from "../../utils/imageList";
 
-const Carousel = ({ imageData }: { imageData: ImageCarouselProps[] }) => {
-  const [currentImage, setCurrentImage] = useState(0);
-  const intervalRef = useRef<number | undefined>();
+const Carousel = () => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
-    startInterval();
+    const intervalId = setInterval(() => {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % imageList.length);
+        setIsTransitioning(false);
+      }, 500);
+    }, 5000);
 
-    return () => clearInterval(intervalRef.current!);
-  }, [currentImage]);
+    return () => clearInterval(intervalId);
+  }, [currentImageIndex, imageList.length]);
 
   const switchImage = (index: number) => {
-    setCurrentImage(index);
-    clearInterval(intervalRef.current!);
+    setIsTransitioning(true);
+    setTimeout(() => {
+      setCurrentImageIndex(index);
+      setIsTransitioning(false);
+    }, 500);
   };
 
-  const startInterval = () => {
-    intervalRef.current = setInterval(() => {
-      setCurrentImage((prevIndex) => (prevIndex + 1) % imageData.length);
-    }, 5000);
-  };
+  const currentImageData = imageList[currentImageIndex];
 
   return (
-    <div className='relative h-screen p-[100px] md:h-[75vh] lg:h-[75vh] md:p-8 lg:p-12'>
-      <div className='relative flex justify-center mx-auto h-full overflow-hidden'>
-        {imageData.map(({ src, title, description }, index) => (
-          <div
-            key={index}
-            className={`absolute max-w-[1000px] h-full object-cover transition-opacity duration-1000 ${
-              index === currentImage ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <img src={src} alt={`Image ${index + 1}`} className='w-full h-full object-cover' />
-            <div className='absolute bottom-0 left-0 w-full h-70 p-10 text-white bg-black bg-opacity-50'>
-              <h2 className='text-2xl md:text-3xl lg:text-3xl font-bold'>{title}</h2>
-              <p className='text-sm md:text-base lg:text-base'>{description}</p>
-            </div>
-            <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2'>
-              {imageData.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => switchImage(index)}
-                  className={`h-3 w-3 bg-white rounded-full focus:outline-none transition-all duration-300 ${
-                    index === currentImage ? "opacity-100 w-9" : "opacity-50"
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        ))}
+    <div className='relative flex justify-center'>
+      <div className='max-w-[800px] relative'>
+        <img
+          key={currentImageIndex}
+          src={currentImageData.src}
+          alt={currentImageData.title}
+          className={`transition-opacity duration-500 ease-in-out ${
+            isTransitioning ? "opacity-0" : "opacity-100"
+          } w-full h-full object-cover max-w-[800px] max-h-[500px]`}
+        />
+        <div
+          className={`absolute bottom-0 left-0 w-full h-70 p-6 lg:p-10 text-white bg-black bg-opacity-50 ${
+            isTransitioning ? "opacity-0" : "opacity-100"
+          } transition-opacity duration-500 ease-in-out`}
+        >
+          <h2 className='text-[14px] lg:text-3xl font-bold'>{currentImageData.title}</h2>
+          <p className='text-[8px] lg:text-base'>{currentImageData.description}</p>
+        </div>
+        <div className='absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2'>
+          {imageList.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => switchImage(index)}
+              className={`h-[7px] w-[7px] lg:h-3 lg:w-3 bg-white rounded-full focus:outline-none transition-all duration-300 ${
+                index === currentImageIndex ? "opacity-100 w-[15px] lg:w-9" : "opacity-50"
+              }`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

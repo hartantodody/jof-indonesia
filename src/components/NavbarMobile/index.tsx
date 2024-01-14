@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import JofLogo from "../../assets/images/jof-logo.svg";
 import hamburgerButton from "../../assets/images/hamburger-button.svg";
 import closeIcon from "../../assets/images/close-icon.svg";
+import { useNavigate } from "react-router-dom";
 
 const NavbarMobile = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -36,7 +38,14 @@ const NavbarMobile = () => {
   return (
     <nav style={mobileNavStyle}>
       <div className={`w-[100%] flex items-center justify-between px-10 ${isOpen ? "py-[50px]" : ""}`}>
-        <img className='w-[120px] cursor-pointer' src={JofLogo} alt='Jof Logo' onClick={toggleMenu} />
+        <img
+          className='w-[120px] cursor-pointer'
+          src={JofLogo}
+          alt='Jof Logo'
+          onClick={() => {
+            navigate("/");
+          }}
+        />
         <img
           className='w-[30px] h-[30px] cursor-pointer'
           src={isOpen ? closeIcon : hamburgerButton}
@@ -46,7 +55,7 @@ const NavbarMobile = () => {
         />
       </div>
       <div style={{ display: isOpen ? "flex" : "none", flexDirection: "column", alignItems: "center" }}>
-        <a href='#portfolio' style={mobileLinkStyle}>
+        <a href='/portfolio' style={mobileLinkStyle}>
           Portfolio
         </a>
         <a href='#services' style={mobileLinkStyle}>

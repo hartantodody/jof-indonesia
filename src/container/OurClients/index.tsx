@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
-import { NavbarDesktop, NavbarMobile } from "../../components";
+import { ClientDesktop, ClientMobile } from "../../components";
 
-const Navbar = () => {
+const OurClients = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 769);
+      setIsMobile(window.innerWidth < 780);
     };
 
     window.addEventListener("resize", handleResize);
@@ -16,7 +16,7 @@ const Navbar = () => {
     };
   }, []);
 
-  return <>{isMobile ? <NavbarMobile /> : <NavbarDesktop />}</>;
+  return <>{isMobile ? <ClientMobile /> : <ClientDesktop />}</>;
 };
 
-export default Navbar;
+export default OurClients;

@@ -21,7 +21,7 @@ const AboutUs = () => {
   const transitionDuration = 1.5;
 
   return (
-    <section ref={ref} className='flex flex-col lg:flex-row justify-center items-center mx-auto p-[109px]'>
+    <section ref={ref} className='flex flex-col lg:flex-row justify-center items-center mx-auto p-5 lg:p-[109px]'>
       <motion.img
         ref={ref}
         initial='hidden'
@@ -39,7 +39,7 @@ const AboutUs = () => {
         initial='hidden'
         animate={inView ? "visible" : "hidden"}
         variants={variants2}
-        className='flex flex-wrap flex-col justify-center items-start p-10 lg:max-w-[50%]'
+        className='flex flex-wrap flex-col justify-center items-start lg:p-10 lg:max-w-[50%]'
       >
         <motion.h4
           ref={ref}
@@ -49,7 +49,7 @@ const AboutUs = () => {
             ...variants2,
             visible: { ...variants2.visible, transition: { delay: staggerDelay * 2, duration: transitionDuration } },
           }}
-          className='text-3xl text-title max-w-[300px] mb-3'
+          className='text-[18px] lg:text-3xl text-title max-w-[300px] mb-3'
         >
           Setting the Standard for Excellence:
         </motion.h4>
@@ -61,7 +61,7 @@ const AboutUs = () => {
             ...variants2,
             visible: { ...variants2.visible, transition: { delay: staggerDelay * 4, duration: transitionDuration } },
           }}
-          className='text-5xl text-headline mb-5'
+          className='text-[26px] lg:text-5xl text-headline mb-5'
         >
           Your Event, Our Passion
         </motion.h2>
@@ -73,7 +73,7 @@ const AboutUs = () => {
             ...variants2,
             visible: { ...variants2.visible, transition: { delay: staggerDelay * 6, duration: transitionDuration } },
           }}
-          className='text-xl text-title mb-5'
+          className='text-[16px] lg:text-xl text-title mb-5'
         >
           Making every project, a passion. Project makes us more emphatic to your event and making sure that everything
           is delivered to the maximum satisfactory of our client.

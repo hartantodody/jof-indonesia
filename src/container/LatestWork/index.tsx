@@ -27,13 +27,13 @@ const LatestWork = () => {
     <>
       <div
         ref={ref}
-        className='h-screen px-[50px] my-[100px]'
+        className='px-2 lg:px-[50px] my-[100px]'
         style={{
           background: "radial-gradient(circle at center rgba(0, 166, 80, 0.075) 20%, transparent 50%)",
         }}
       >
         <motion.h4
-          className='text-6xl my-5 font-light font-plus-jakarta-sans'
+          className='text-[22px] lg:text-6xl lg:my-5 font-light'
           style={{
             display: "inline-block",
             backgroundImage: "linear-gradient(135deg, #00A650, #FFC200)",
@@ -51,7 +51,7 @@ const LatestWork = () => {
           Latest Work
         </motion.h4>
         <motion.h2
-          className='text-xl mb-9 text-headline max-w-[400px] font-light font-plus-jakarta-sans'
+          className='text-[14px] lg:text-xl mb-9 text-headline max-w-[400px] font-light'
           variants={{
             ...variants,
             visible: { ...variants.visible, transition: { delay: staggerDelay * 2, duration: transitionDuration } },
@@ -71,10 +71,10 @@ const LatestWork = () => {
           initial='hidden'
           animate={inView ? "visible" : "hidden"}
         >
-          <Carousel imageData={imageList} />
+          <Carousel />
         </motion.div>
         <motion.button
-          className='py-2 px-6 mx-auto border border-title text-title bg-transparent hover:bg-title hover:text-black hover:opacity-90 hover:scale-2 transition-all duration-300 focus:outline-none rounded-md'
+          className='mt-9 py-2 px-6 mx-auto border border-title text-title bg-transparent hover:bg-title hover:text-black hover:opacity-90 hover:scale-2 transition-all duration-300 focus:outline-none rounded-md'
           variants={buttonVariants}
           initial='hidden'
           animate='visible'

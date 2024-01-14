@@ -28,7 +28,7 @@ const AboutUs2 = () => {
     <>
       <section
         ref={ref}
-        className='bg-black flex flex-row sm:flex-row justify-center items-center mx-auto p-[50px]'
+        className='bg-black flex flex-col lg:flex-row md:justify-center md:items-center lg:mx-auto py-[150px] px-5 lg:p-[50px]'
         style={{ backdropFilter: "blur(8px)" }}
       >
         <motion.article
@@ -36,10 +36,10 @@ const AboutUs2 = () => {
           initial='hidden'
           animate={inView ? "visible" : "hidden"}
           variants={variants}
-          className='p-10'
+          className='w-[300px] lg:w-[500px]'
         >
           <motion.h4
-            className='text-4xl text-headline max-w-[300px]'
+            className='text-[26px] lg:text-4xl font-semibold text-headline'
             variants={{
               ...variants2,
               visible: { ...variants2.visible, transition: { delay: staggerDelay * 1, duration: transitionDuration } },
@@ -48,7 +48,7 @@ const AboutUs2 = () => {
             Helping National & International
           </motion.h4>
           <motion.h4
-            className='text-4xl mb-5'
+            className='text-[26px] lg:text-4xl mb-5 font-semibold'
             style={{
               display: "inline-block",
               backgroundImage: "linear-gradient(135deg, #00A650, #FFC200)",
@@ -63,7 +63,7 @@ const AboutUs2 = () => {
             Client Evolve Their Events
           </motion.h4>
           <motion.p
-            className='text-xl text-title max-w-[300px]'
+            className='text-[16px] lg:text-xl text-title'
             variants={{
               ...variants2,
               visible: { ...variants2.visible, transition: { delay: staggerDelay * 3, duration: transitionDuration } },
@@ -77,7 +77,7 @@ const AboutUs2 = () => {
           initial='hidden'
           animate={inView ? "visible" : "hidden"}
           variants={variants}
-          className='p-10 grid grid-cols-1 md:grid-cols-2 gap-5'
+          className='p-0 py-5 lg:py-0 lg:p-10 grid grid-cols-2 gap-5 '
         >
           <motion.div
             variants={{
@@ -86,11 +86,11 @@ const AboutUs2 = () => {
             }}
           >
             <div className='flex gap-5'>
-              <img src={clientIcon} alt='' />
+              <img src={clientIcon} className='w-[34px] lg:w-[54px]' />
               <div>
-                <motion.h4 className='text-4xl text-headline max-w-[300px]'>{">"}10</motion.h4>
+                <motion.h4 className='text-[20.27px] lg:text-4xl text-headline max-w-[300px]'>{">"}10</motion.h4>
                 <motion.p
-                  className='text-xl text-title max-w-[300px]'
+                  className='text-[11.58px] lg:text-xl text-title max-w-[300px]'
                   variants={{
                     visible: {
                       opacity: 1,
@@ -111,11 +111,11 @@ const AboutUs2 = () => {
             }}
           >
             <div className='flex gap-5'>
-              <img src={deliveredIcon} alt='' />
+              <img src={deliveredIcon} className='w-[34px] lg:w-[54px]' />
               <div>
-                <motion.h4 className='text-4xl text-headline max-w-[300px]'>{">"}100</motion.h4>
+                <motion.h4 className='text-[20.27px] lg:text-4xl text-headline max-w-[300px]'>{">"}100</motion.h4>
                 <motion.p
-                  className='text-xl text-title max-w-[300px]'
+                  className='text-[11.58px] lg:text-xl text-title max-w-[300px]'
                   variants={{
                     visible: {
                       opacity: 1,
@@ -136,11 +136,11 @@ const AboutUs2 = () => {
             }}
           >
             <div className='flex gap-5'>
-              <img src={roIcon} alt='' />
+              <img src={roIcon} className='w-[34px] lg:w-[54px]' />
               <div>
-                <motion.h4 className='text-4xl text-headline max-w-[300px]'>{">"}10</motion.h4>
+                <motion.h4 className='text-[20.27px] lg:text-4xl text-headline max-w-[300px]'>{">"}10</motion.h4>
                 <motion.p
-                  className='text-xl text-title max-w-[300px]'
+                  className='text-[11.58px] lg:text-xl text-title max-w-[300px]'
                   variants={{
                     visible: {
                       opacity: 1,
@@ -161,11 +161,11 @@ const AboutUs2 = () => {
             }}
           >
             <div className='flex gap-5'>
-              <img src={smileyIcon} alt='' />
+              <img src={smileyIcon} className='w-[34px] lg:w-[54px]' />
               <div>
-                <motion.h4 className='text-4xl text-headline max-w-[300px]'>{">"}10000</motion.h4>
+                <motion.h4 className='text-[20.27px] lg:text-4xl text-headline max-w-[300px]'>{">"}10000</motion.h4>
                 <motion.p
-                  className='text-xl text-title max-w-[300px]'
+                  className='text-[11.58px] lg:text-xl text-title max-w-[300px]'
                   variants={{
                     visible: {
                       opacity: 1,
