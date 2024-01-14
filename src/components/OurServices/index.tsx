@@ -23,6 +23,7 @@ const OurServices = () => {
 
   return (
     <motion.section
+      id='services'
       ref={ref}
       className='text-center lg:p-10'
       variants={sectionVariants}
