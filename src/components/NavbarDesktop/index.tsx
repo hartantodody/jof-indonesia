@@ -2,10 +2,8 @@ import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import JofLogo from "../../assets/images/jof-logo.svg";
-import { useNavigate } from "react-router-dom";
 
 const NavbarDesktop = () => {
-  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
