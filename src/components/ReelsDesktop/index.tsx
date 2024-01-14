@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import ReelsLandscape from "../../assets/videos/hero-content-landscape.webm";
 import ReelsPortrait from "../../assets/videos/hero-content-portrait.webm";
 import HeroHeader from "../HeroHeader";

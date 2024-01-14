@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Carousel } from "../../components";
-import { imageList } from "../../utils/imageList";
 import "../../styles/main.css";
 
 const LatestWork = () => {
