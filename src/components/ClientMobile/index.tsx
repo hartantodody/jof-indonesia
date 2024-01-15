@@ -31,7 +31,7 @@ const ClientMobile = () => {
   }, [currentIndex]);
 
   return (
-    <section className='p-[50px] flex justify-center items-center'>
+    <section className='p-[50px] flex justify-center items-center bg-[#0e0e0e]'>
       <div className='flex flex-col transition-transform duration-500 ease-in-out'>
         <div className='flex justify-center items-center h-[300px] w-[203px] my-auto'>
           {images.map((image, index) => (

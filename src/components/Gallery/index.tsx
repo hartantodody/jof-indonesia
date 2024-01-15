@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { imageList } from "../../utils/imageList";
 
-const Carousel = () => {
+const Gallery = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
@@ -71,4 +71,4 @@ const Carousel = () => {
   );
 };
 
-export default Carousel;
+export default Gallery;

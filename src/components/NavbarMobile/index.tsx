@@ -13,6 +13,11 @@ const NavbarMobile = () => {
 
   const closeMenu = () => {
     setIsOpen(false);
+
+    const servicesSection = document.getElementById("services");
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   const mobileNavStyle: React.CSSProperties = {
@@ -40,7 +45,7 @@ const NavbarMobile = () => {
 
   return (
     <nav style={mobileNavStyle}>
-      <div className={`w-[100%] flex items-center justify-between px-10 ${isOpen ? "py-[50px]" : ""}`}>
+      <div className={`w-[100%] flex items-center justify-between px-2 ${isOpen ? "py-[50px]" : ""}`}>
         <Link to='/' className='w-[120px] cursor-pointer' onClick={closeMenu}>
           <img src={JofLogo} alt='Jof Logo' />
         </Link>
@@ -49,16 +54,15 @@ const NavbarMobile = () => {
           src={isOpen ? closeIcon : hamburgerButton}
           alt='Toggle Menu'
           onClick={toggleMenu}
-          style={{ marginRight: "20px" }}
         />
       </div>
       <div style={{ display: isOpen ? "flex" : "none", flexDirection: "column", alignItems: "center" }}>
         <Link to='/portfolio' style={mobileLinkStyle} onClick={closeMenu}>
           Portfolio
         </Link>
-        <a href='#services' style={mobileLinkStyle} onClick={closeMenu}>
+        <Link to='/#services' style={mobileLinkStyle} onClick={closeMenu}>
           Services
-        </a>
+        </Link>
         <Link to='/about-us' style={mobileLinkStyle} onClick={closeMenu}>
           About Us
         </Link>

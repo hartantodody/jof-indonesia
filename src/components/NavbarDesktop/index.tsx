@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { motion, useAnimation } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import JofLogo from "../../assets/images/jof-logo.svg";
 
 const NavbarDesktop = () => {
+  const NAVIGATE = useNavigate();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -36,6 +37,7 @@ const NavbarDesktop = () => {
     color: "white",
     textDecoration: "none",
     transition: "color 0.3s ease-out",
+    fontWeight: "700",
   };
 
   const hrVariants = {
@@ -56,9 +58,22 @@ const NavbarDesktop = () => {
       onHoverEnd: () => lineAnimationControls.start("hidden"),
     };
 
+    const handleClick = async () => {
+      lineAnimationControls.start("visible");
+
+      await new Promise((resolve) => setTimeout(resolve, 200));
+
+      const targetElement = document.querySelector("#services");
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+      }
+
+      lineAnimationControls.start("hidden");
+    };
+
     return (
       <motion.div whileHover={{ color: "#00A650" }} {...hoverProps}>
-        <Link to={to} style={linkStyle}>
+        <Link to={to} style={linkStyle} onClick={handleClick}>
           {children}
           <motion.hr
             className='border-[#00A650] border-t-2'
@@ -73,10 +88,10 @@ const NavbarDesktop = () => {
 
   return (
     <nav style={navbarStyle} className='px-[64px] lg:px-[128px]'>
-      <img className='w-[120px] cursor-pointer' src={JofLogo} alt='Jof Logo' />
+      <img className='w-[120px] cursor-pointer' src={JofLogo} alt='Jof Logo' onClick={() => NAVIGATE("/")} />
       <div className='text-white flex flex-row justify-evenly gap-[44px]'>
         <LinkWithAnimation to='/portfolio'>Portfolio</LinkWithAnimation>
-        <LinkWithAnimation to='#services'>Services</LinkWithAnimation>
+        <LinkWithAnimation to='/'>Services</LinkWithAnimation>
         <LinkWithAnimation to='/about-us'>About Us</LinkWithAnimation>
         <LinkWithAnimation to='#contact'>Contact</LinkWithAnimation>
       </div>

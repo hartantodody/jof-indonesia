@@ -29,113 +29,73 @@ const ClientDesktop = () => {
   const staggerDelay = 0.2;
   const transitionDuration = 1.5;
 
+  const responsiveImageStyle = {
+    height: "100%",
+  };
+
   return (
-    <section className='flex flex-col justify-center items-center px-[152px] py-[79px]'>
+    <section className='flex flex-col justify-center items-center py-[79px] gap-[50px] bg-[#0e0e0e]'>
       <motion.div
         ref={ref}
         initial='hidden'
         animate={inView ? "visible" : "hidden"}
         variants={variants}
-        className='flex flex-wrap flex-row justify-center items-center gap-[127px] mb-[41px]'
+        className='flex flex-row justify-between items-center mb-[41px] w-[100%] px-[50px]'
       >
-        <motion.img
-          src={euLogo}
-          alt=''
-          className='max-w-full'
-          variants={{
-            ...variants,
-            visible: { ...variants.visible, transition: { delay: staggerDelay * 1, duration: transitionDuration } },
-          }}
-        />
-        <motion.img
-          src={undp}
-          alt=''
-          className='max-w-full'
-          variants={{
-            ...variants,
-            visible: { ...variants.visible, transition: { delay: staggerDelay * 2, duration: transitionDuration } },
-          }}
-        />
-        <motion.img
-          src={unesco}
-          alt=''
-          className='max-w-full'
-          variants={{
-            ...variants,
-            visible: { ...variants.visible, transition: { delay: staggerDelay * 3, duration: transitionDuration } },
-          }}
-        />
-        <motion.img
-          src={tanoto}
-          alt=''
-          className='max-w-full'
-          variants={{
-            ...variants,
-            visible: { ...variants.visible, transition: { delay: staggerDelay * 4, duration: transitionDuration } },
-          }}
-        />
-        <motion.img
-          src={kemenparekraf}
-          alt=''
-          className='max-w-full'
-          variants={{
-            ...variants,
-            visible: { ...variants.visible, transition: { delay: staggerDelay * 5, duration: transitionDuration } },
-          }}
-        />
+        {[
+          { src: euLogo, alt: "EU Logo" },
+          { src: undp, alt: "UNDP Logo" },
+          { src: unesco, alt: "UNESCO Logo" },
+          { src: tanoto, alt: "Tanoto Logo" },
+          { src: kemenparekraf, alt: "Kemenparekraf Logo" },
+        ].map((image, index) => (
+          <div className='w-[350px] flex justify-center items-center px-[15px]'>
+            <motion.img
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              style={responsiveImageStyle}
+              variants={{
+                ...variants,
+                visible: {
+                  ...variants.visible,
+                  transition: { delay: staggerDelay * (index + 1), duration: transitionDuration },
+                },
+              }}
+            />
+          </div>
+        ))}
       </motion.div>
       <motion.div
         ref={ref}
         initial='hidden'
         animate={inView ? "visible" : "hidden"}
         variants={variants2}
-        className='flex flex-wrap justify-center items-center flex-row gap-[127px]'
+        className='flex flex-row justify-between items-center mb-[41px] w-[100%] px-[50px]'
       >
-        <motion.img
-          src={herbalife}
-          alt=''
-          className='max-w-full'
-          variants={{
-            ...variants2,
-            visible: { ...variants2.visible, transition: { delay: staggerDelay * 6, duration: transitionDuration } },
-          }}
-        />
-        <motion.img
-          src={pgri}
-          alt=''
-          className='max-w-full'
-          variants={{
-            ...variants2,
-            visible: { ...variants2.visible, transition: { delay: staggerDelay * 7, duration: transitionDuration } },
-          }}
-        />
-        <motion.img
-          src={poldaMetro}
-          alt=''
-          className='max-w-full'
-          variants={{
-            ...variants2,
-            visible: { ...variants2.visible, transition: { delay: staggerDelay * 8, duration: transitionDuration } },
-          }}
-        />
-        <motion.img
-          src={bpip}
-          alt=''
-          className='max-w-full'
-          variants={{
-            ...variants2,
-            visible: { ...variants2.visible, transition: { delay: staggerDelay * 9, duration: transitionDuration } },
-          }}
-        />
-        <motion.img
-          src={jamkrindo}
-          alt=''
-          className='max-w-full'
-          variants={{
-            ...variants2,
-            visible: { ...variants2.visible, transition: { delay: staggerDelay * 10, duration: transitionDuration } },
-          }}
-        />
+        {[
+          { src: herbalife, alt: "Herbalife Logo" },
+          { src: pgri, alt: "PGRI Logo" },
+          { src: poldaMetro, alt: "Polda Metro Logo" },
+          { src: bpip, alt: "BPIP Logo" },
+          { src: jamkrindo, alt: "Jamkrindo Logo" },
+        ].map((image, index) => (
+          <div className='w-[350px] flex justify-center items-center px-[15px]'>
+            <motion.img
+              key={index}
+              src={image.src}
+              alt={image.alt}
+              style={responsiveImageStyle}
+              variants={{
+                ...variants2,
+                visible: {
+                  ...variants2.visible,
+                  transition: { delay: staggerDelay * (index + 6), duration: transitionDuration },
+                },
+              }}
+            />
+          </div>
+        ))}
       </motion.div>
     </section>
   );

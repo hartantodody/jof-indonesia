@@ -32,7 +32,7 @@ const EventOrganizer = () => {
         variants={{ hidden: { opacity: 0, x: -50 }, visible: { opacity: 1, x: 0 } }}
         className='lg:p-10 max-w-[100%]'
       >
-        <div className='bg-cardbg bg-opacity-25 min-w-[300px] p-5 rounded-[10px] lg:min-h-[640px]'>
+        <div className='bg-cardbg bg-opacity-25 p-5 rounded-[10px] lg:min-h-[640px] lg:p-[80px]'>
           <motion.h4
             className='text-[26px] lg:text-4xl mb-[50px] '
             style={{
@@ -49,7 +49,7 @@ const EventOrganizer = () => {
           >
             Event Production
           </motion.h4>
-          <div className='flex flex-col lg:flex-row text-left gap-0 lg:gap-9'>
+          <div className='flex flex-col lg:flex-row text-left gap-0 lg:gap-[50px]'>
             <div className='flex flex-col lg:px-5'>
               <div className='flex flex-row items-center justify-start mb-9'>
                 <img src={fullPackageIcon} />
