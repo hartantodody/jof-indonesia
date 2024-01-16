@@ -1,5 +1,5 @@
-import jofTeam from "../../assets/images/photos/jof-team.png";
-import jofTeamSmall from "../../assets/images/photos/jof-team-sm.png";
+import jofTeam from "../../assets/images/photos/jof-team.webp";
+import jofTeamSmall from "../../assets/images/photos/jof-team-sm.webp";
 import "../../styles/main.css";
 
 const AboutUsDetails = () => {

@@ -93,7 +93,7 @@ const NavbarDesktop = () => {
         <LinkWithAnimation to='/portfolio'>Portfolio</LinkWithAnimation>
         <LinkWithAnimation to='/'>Services</LinkWithAnimation>
         <LinkWithAnimation to='/about-us'>About Us</LinkWithAnimation>
-        <LinkWithAnimation to='#contact'>Contact</LinkWithAnimation>
+        <LinkWithAnimation to='/contact-us'>Contact</LinkWithAnimation>
       </div>
     </nav>
   );

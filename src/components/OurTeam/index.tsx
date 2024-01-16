@@ -1,7 +1,7 @@
-import herdy from "../../assets/images/portraits/Herdy.png";
-import elsa from "../../assets/images/portraits/Elsa.png";
-import rivo from "../../assets/images/portraits/Rivo.png";
-import unggul from "../../assets/images/portraits/Unggul.png";
+import herdy from "../../assets/images/portraits/Herdy.webp";
+import elsa from "../../assets/images/portraits/Elsa.webp";
+import rivo from "../../assets/images/portraits/Rivo.webp";
+import unggul from "../../assets/images/portraits/Unggul.webp";
 
 const OurTeam = () => {
   return (

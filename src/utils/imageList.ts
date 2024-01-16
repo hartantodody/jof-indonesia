@@ -1,11 +1,11 @@
-import image1 from "../assets/images/photos/1.png";
-import image2 from "../assets/images/photos/2.png";
-import image3 from "../assets/images/photos/3.png";
-import image4 from "../assets/images/photos/4.png";
-import image5 from "../assets/images/photos/5.png";
-import image6 from "../assets/images/photos/6.png";
-import image7 from "../assets/images/photos/7.png";
-import image8 from "../assets/images/photos/8.png";
+import image1 from "../assets/images/photos/1.webp";
+import image2 from "../assets/images/photos/2.webp";
+import image3 from "../assets/images/photos/3.webp";
+import image4 from "../assets/images/photos/4.webp";
+import image5 from "../assets/images/photos/5.webp";
+import image6 from "../assets/images/photos/6.webp";
+import image7 from "../assets/images/photos/7.webp";
+import image8 from "../assets/images/photos/8.webp";
 
 export const imageList = [
   {

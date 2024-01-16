@@ -66,7 +66,7 @@ const NavbarMobile = () => {
         <Link to='/about-us' style={mobileLinkStyle} onClick={closeMenu}>
           About Us
         </Link>
-        <a href='#contact' style={mobileLinkStyle} onClick={closeMenu}>
+        <a href='/contact-us' style={mobileLinkStyle} onClick={closeMenu}>
           Contact
         </a>
       </div>
