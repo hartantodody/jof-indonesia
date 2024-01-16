@@ -1,11 +1,11 @@
 import "./index.css";
 
-interface GradientButtonProps {
-  onClick: () => void;
-  buttonText: string;
-}
+// interface GradientButtonProps {
+//   onClick: () => void;
+//   buttonText: string;
+// }
 
-const GradientButton = ({ onClick, buttonText, ...props }: GradientButtonProps) => {
+const GradientButton = () => {
   return (
     <></>
     // <div className='container'>
