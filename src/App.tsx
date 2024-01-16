@@ -1,5 +1,5 @@
 import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { AboutUsPage, HomePage, PortfolioPage } from "./pages";
+import { AboutUsPage, HomePage, PortfolioPage, ContactUsPage } from "./pages";
 
 const globalStyles: React.CSSProperties = {
   boxSizing: "border-box",
@@ -15,6 +15,7 @@ function App() {
           <Route path='/' element={<HomePage />} />
           <Route path='/about-us' element={<AboutUsPage />} />
           <Route path='/portfolio' element={<PortfolioPage />} />
+          <Route path='/contact-us' element={<ContactUsPage />} />
         </Routes>
       </BrowserRouter>
     </div>
