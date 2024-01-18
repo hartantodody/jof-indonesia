@@ -19,6 +19,7 @@ const EventOrganizer = () => {
 
   const staggerDelay = 0.2;
   const transitionDuration = 1.5;
+
   return (
     <>
       <motion.div
@@ -30,7 +31,7 @@ const EventOrganizer = () => {
       >
         <div className='bg-cardbg bg-opacity-25 min-w-[300px] p-5 rounded-[10px] lg:min-h-[640px] lg:max-h-[720px] lg:p-[80px]'>
           <motion.h4
-            className='text-[26px] lg:text-4xl mb-[50px]'
+            className='text-[1.625rem] lg:text-4xl mb-[3.125rem]'
             style={{
               display: "inline-block",
               backgroundImage: "linear-gradient(135deg, #00A650, #FFC200)",
@@ -45,26 +46,27 @@ const EventOrganizer = () => {
           >
             Event Organizer
           </motion.h4>
-          <div className='flex flex-col lg:flex-col text-left gap-0 lg:gap-3'>
-            <div className='flex flex-row items-center justify-start mb-6'>
-              <img src={fullServiceIcon} />{" "}
-              <p className='text-left text-[16px] lg:text-xl text-textservice ml-5'>Full Service</p>
+          <div className='flex flex-col lg:flex-col text-left gap-0 lg:gap-1.875em'>
+            {/* Adjusted spacing using em units */}
+            <div className='flex flex-row items-center justify-start mb-1.125em'>
+              <img src={fullServiceIcon} />
+              <p className='text-left text-[1] lg:text-[1.25vw] text-textservice ml-1.25em'>Full Service</p>
             </div>
-            <div className='flex flex-row items-center justify-start mb-6'>
-              <img src={eventPlanningIcon} />{" "}
-              <p className='text-left text-[16px] lg:text-xl text-textservice ml-5'>Event Planning</p>
+            <div className='flex flex-row items-center justify-start mb-1.125em'>
+              <img src={eventPlanningIcon} />
+              <p className='text-left text-[1rem] lg:text-xl text-textservice ml-1.25em'>Event Planning</p>
             </div>
-            <div className='flex flex-row items-center justify-start mb-6'>
-              <img src={showManageIcon} />{" "}
-              <p className='text-left text-[16px] lg:text-xl text-textservice ml-5'>Show Management</p>
+            <div className='flex flex-row items-center justify-start mb-1.125em'>
+              <img src={showManageIcon} />
+              <p className='text-left text-[1rem] lg:text-xl text-textservice ml-1.25em'>Show Management</p>
             </div>
-            <div className='text-left flex flex-row items-center justify-start mb-6'>
-              <img src={exhibitionIcon} />{" "}
-              <p className='text-left text-[16px] lg:text-xl text-textservice ml-5'>Exhibition Event</p>
+            <div className='text-left flex flex-row items-center justify-start mb-1.125em'>
+              <img src={exhibitionIcon} />
+              <p className='text-left text-[1rem] lg:text-xl text-textservice ml-1.25em'>Exhibition Event</p>
             </div>
-            <div className='flex flex-row items-center justify-start mb-6'>
-              <img src={productLaunchIcon} />{" "}
-              <p className='text-left text-[16px] lg:text-xl text-textservice ml-5'>Product Launching</p>
+            <div className='flex flex-row items-center justify-start mb-1.125em'>
+              <img src={productLaunchIcon} />
+              <p className='text-left text-[1rem] lg:text-xl text-textservice ml-1.25em'>Product Launching</p>
             </div>
           </div>
         </div>

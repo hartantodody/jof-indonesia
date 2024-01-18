@@ -48,13 +48,7 @@ const AboutUs2 = () => {
             Helping National & International
           </motion.h4>
           <motion.h4
-            className='text-[26px] lg:text-4xl mb-5 font-semibold'
-            style={{
-              display: "inline-block",
-              backgroundImage: "linear-gradient(135deg, #00A650, #FFC200)",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
-            }}
+            className='text-[26px] lg:text-4xl mb-5 font-semibold gradient-text'
             variants={{
               ...variants2,
               visible: { ...variants2.visible, transition: { delay: staggerDelay * 2, duration: transitionDuration } },

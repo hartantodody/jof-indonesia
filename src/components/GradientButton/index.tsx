@@ -1,16 +1,20 @@
 import "./index.css";
+import "../../styles/main.css";
 
-// interface GradientButtonProps {
-//   onClick: () => void;
-//   buttonText: string;
-// }
+interface OppositeGradientButtonProps {
+  onClick: () => void;
+  text: string;
+  className?: string;
+  type: "submit" | "reset" | "button" | undefined;
+}
 
-const GradientButton = () => {
+const GradientButton: React.FC<OppositeGradientButtonProps> = ({ onClick, text, className, type }) => {
   return (
-    <></>
-    // <div className='container'>
-    //   <button className='btn' onClick={onClick} data={buttonText} {...props}></button>
-    // </div>
+    <>
+      <button className={`btn font-bold ${className}`} onClick={onClick} type={type}>
+        <span className='gradient-text'>{text}</span>
+      </button>
+    </>
   );
 };
 

@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { Carousel } from "../../components";
 import "../../styles/main.css";
+import GradientButton from "../../components/GradientButton";
 
 const LatestWork = () => {
+  const navigate = useNavigate();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -72,15 +75,16 @@ const LatestWork = () => {
         >
           <Carousel />
         </motion.div>
-        <motion.button
-          className='mt-9 py-2 px-6 mx-auto border border-title text-title bg-transparent hover:bg-title hover:text-black hover:opacity-90 hover:scale-2 transition-all duration-300 focus:outline-none rounded-md'
-          variants={buttonVariants}
-          initial='hidden'
-          animate='visible'
-          style={{ display: "flex", justifyContent: "center" }}
-        >
-          Watch More
-        </motion.button>
+        <motion.div className='flex justify-center mt-9 ' variants={buttonVariants} initial='hidden' animate='visible'>
+          <GradientButton
+            type='button'
+            className='px-[24px] py-[8px]'
+            text='Watch More'
+            onClick={() => {
+              navigate("/portfolio");
+            }}
+          />
+        </motion.div>
       </div>
     </>
   );

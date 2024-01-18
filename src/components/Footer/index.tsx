@@ -2,6 +2,7 @@ import linkedIn from "../../assets/images/linkedin.svg";
 import instagram from "../../assets/images/instagram.svg";
 import facebook from "../../assets/images/facebook-f.svg";
 import youtube from "../../assets/images/youtube.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -20,12 +21,20 @@ const Footer = () => {
           </div>
           <div className='flex flex-col sm:flex-row items-center'>
             <div className='lg:flex lg:flex-col px-5 hidden sm:text-center md:text-left lg:text-left'>
-              <p className='text-[14px] lg:text-[19.19px] font-light text-title p-2'>Portfolio</p>
-              <p className='text-[14px] lg:text-[19.19px] font-light text-title p-2'>Services</p>
+              <Link to='/portfolio' className='text-[14px] lg:text-[19.19px] font-light text-title p-2'>
+                Portfolio
+              </Link>
+              <Link to='/' className='text-[14px] lg:text-[19.19px] font-light text-title p-2'>
+                Services
+              </Link>
             </div>
             <div className='lg:flex lg:flex-col px-5 hidden sm:text-center md:text-left lg:text-left'>
-              <p className='text-[14px] lg:text-[19.19px] font-light text-title p-2'>About Us</p>
-              <p className='text-[14px] lg:text-[19.19px] font-light text-title p-2'>Contact</p>
+              <Link to='/about-us' className='text-[14px] lg:text-[19.19px] font-light text-title p-2'>
+                About Us
+              </Link>
+              <Link to='/contact-us' className='text-[14px] lg:text-[19.19px] font-light text-title p-2'>
+                Contact
+              </Link>
             </div>
             <div className='flex flex-col px-5'>
               <p className='text-[14px] lg:text-[19.19px] font-light text-title p-2 text-center md:text-left'>

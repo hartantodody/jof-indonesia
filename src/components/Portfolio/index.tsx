@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { imageList } from "../../utils/imageList";
+import GradientButton from "../GradientButton";
 
 const Portfolio = () => {
   const [showMore, setShowMore] = useState(false);
@@ -7,8 +8,8 @@ const Portfolio = () => {
 
   return (
     <>
-      <section className='mt-[80px] px-5 lg:px-7 text-headline flex flex-col justify-center items-center '>
-        <h2 className='text-[28px] lg:text-[72px] lg:mb-[80px] text-center py-9 font-bold'>Portfolio</h2>
+      <section className='px-5 py-9 lg:px-7 text-headline flex flex-col justify-center items-center '>
+        <h2 className='text-[28px] lg:text-[72px] lg:mb-[80px] text-center font-bold'>Portfolio</h2>
         {itemsToShow.map((item, index) => (
           <div key={index} className='bg-cardbg bg-opacity-25 mb-[24px] lg:flex lg:flex-row-reverse'>
             <img src={item.src} alt={item.description} className='lg:w-[500px]' />
@@ -20,7 +21,9 @@ const Portfolio = () => {
             </div>
           </div>
         ))}
-        {imageList.length > 4 && !showMore && <button onClick={() => setShowMore(true)}>Show More</button>}
+        {imageList.length > 4 && !showMore && (
+          <GradientButton type='button' text='Show Me More' onClick={() => setShowMore(true)} />
+        )}
       </section>
     </>
   );

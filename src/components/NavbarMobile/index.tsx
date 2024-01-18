@@ -11,8 +11,10 @@ const NavbarMobile = () => {
     setIsOpen(!isOpen);
   };
 
-  const closeMenu = () => {
+  const closeMenu = async () => {
     setIsOpen(false);
+
+    await new Promise((resolve) => setTimeout(resolve, 200));
 
     const servicesSection = document.getElementById("services");
     if (servicesSection) {
@@ -60,7 +62,7 @@ const NavbarMobile = () => {
         <Link to='/portfolio' style={mobileLinkStyle} onClick={closeMenu}>
           Portfolio
         </Link>
-        <Link to='/#services' style={mobileLinkStyle} onClick={closeMenu}>
+        <Link to='/' style={mobileLinkStyle} onClick={closeMenu}>
           Services
         </Link>
         <Link to='/about-us' style={mobileLinkStyle} onClick={closeMenu}>

@@ -34,7 +34,7 @@ const EventOrganizer = () => {
       >
         <div className='bg-cardbg bg-opacity-25 p-5 rounded-[10px] lg:min-h-[640px] lg:p-[80px]'>
           <motion.h4
-            className='text-[26px] lg:text-4xl mb-[50px] '
+            className='text-[1.625rem] lg:text-4xl mb-[3.125rem] '
             style={{
               display: "inline-block",
               backgroundImage: "linear-gradient(135deg, #00A650, #FFC200)",
@@ -49,51 +49,55 @@ const EventOrganizer = () => {
           >
             Event Production
           </motion.h4>
-          <div className='flex flex-col lg:flex-row text-left gap-0 lg:gap-[50px]'>
-            <div className='flex flex-col lg:px-5'>
-              <div className='flex flex-row items-center justify-start mb-9'>
+          <div className='flex flex-col lg:flex-row text-left gap-0 lg:gap-[1.875em]'>
+            <div className='flex flex-col lg:px-[1.25em]'>
+              <div className='flex flex-row items-center justify-start mb-[1.125em]'>
                 <img src={fullPackageIcon} />
-                <p className='text-left text-[16px] lg:text-xl text-textservice ml-5 max-w-[200px]'>Full Package</p>
+                <p className='text-left text-[1rem] lg:text-xl text-textservice ml-[0.625em] max-w-[200px]'>
+                  Full Package
+                </p>
               </div>
-              <div className='flex flex-row items-center justify-start mb-9'>
+              <div className='flex flex-row items-center justify-start mb-[1.125em]'>
                 <img src={exhibitionIcon} />
-                <p className='text-left text-[16px] lg:text-xl text-textservice ml-5 max-w-[200px]'>
+                <p className='text-left text-[1rem] lg:text-xl text-textservice ml-[0.625em] max-w-[200px]'>
                   Exhibition Booth and Stand
                 </p>
               </div>
-              <div className='flex flex-row items-center justify-start mb-9'>
+              <div className='flex flex-row items-center justify-start mb-[1.125em]'>
                 <img src={multimediaIcon} />
-                <p className='text-left text-[16px] lg:text-xl text-textservice ml-5 max-w-[200px]'>
+                <p className='text-left text-[1rem] lg:text-xl text-textservice ml-[0.625em] max-w-[200px]'>
                   Multimedia Content Creation
                 </p>
               </div>
-              <div className='flex flex-row items-center justify-start mb-9'>
+              <div className='flex flex-row items-center justify-start mb-[1.125em]'>
                 <img src={multicameraIcon} />
-                <p className='text-left text-[16px] lg:text-xl text-textservice ml-5 max-w-[200px]'>
+                <p className='text-left text-[1rem] lg:text-xl text-textservice ml-[0.625em] max-w-[200px]'>
                   Multicamera System and Documentation
                 </p>
               </div>
             </div>
-            <div className='flex flex-col lg:px-5'>
-              <div className='flex flex-row items-center justify-start mb-9'>
+            <div className='flex flex-col lg:px-[1.25em]'>
+              <div className='flex flex-row items-center justify-start mb-[1.125em]'>
                 <img src={stageIcon} />{" "}
-                <p className='text-left text-[16px] lg:text-xl text-textservice ml-5 max-w-[200px]'>
+                <p className='text-left text-[1rem] lg:text-xl text-textservice ml-[0.625em] max-w-[200px]'>
                   Stage and Rigging
                 </p>
               </div>
-              <div className='flex flex-row items-center justify-start mb-9'>
+              <div className='flex flex-row items-center justify-start mb-[1.125em]'>
                 <img src={soundIcon} />{" "}
-                <p className='text-left text-[16px] lg:text-xl text-textservice ml-5 max-w-[200px]'>Sound System</p>
+                <p className='text-left text-[1rem] lg:text-xl text-textservice ml-[0.625em] max-w-[200px]'>
+                  Sound System
+                </p>
               </div>
-              <div className='flex flex-row items-center justify-start mb-9'>
+              <div className='flex flex-row items-center justify-start mb-[1.125em]'>
                 <img src={ledIcon} />
-                <p className='text-left text-[16px] lg:text-xl text-textservice ml-5 max-w-[200px]'>
+                <p className='text-left text-[1rem] lg:text-xl text-textservice ml-[0.625em] max-w-[200px]'>
                   LED, Multimedia and Lighting System
                 </p>
               </div>
-              <div className='flex flex-row items-center justify-start mb-9'>
+              <div className='flex flex-row items-center justify-start mb-[1.125em]'>
                 <img src={designIcon} />
-                <p className='text-left text-[16px] lg:text-xl text-textservice ml-5 max-w-[200px]'>
+                <p className='text-left text-[1rem] lg:text-xl text-textservice ml-[0.625em] max-w-[200px]'>
                   Design Concept Creation
                 </p>
               </div>

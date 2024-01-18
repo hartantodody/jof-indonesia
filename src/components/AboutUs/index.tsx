@@ -86,9 +86,7 @@ const AboutUs = () => {
             ...variants2,
             visible: { ...variants2.visible, transition: { delay: staggerDelay * 8, duration: transitionDuration } },
           }}
-          className='bg-transparent text-xl text-title border border-title rounded-[5px] p-5 hover:bg-title hover:text-black'
-          whileHover={{ scale: 1.05 }}
-          transition={{ duration: 0.3 }}
+          className='flex py-2 px-6 border border-title text-title bg-transparent hover:bg-title hover:text-black hover:opacity-90 hover:scale-2 transition-all duration-300 focus:outline-none rounded-md'
         >
           More About Us
         </motion.button>

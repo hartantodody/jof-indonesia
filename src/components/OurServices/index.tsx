@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { EventOrganizer, EventProduction } from "..";
+import OppositeGradientButton from "../OppositeGradientButton";
 
 const OurServices = () => {
+  const navigate = useNavigate();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -31,15 +34,7 @@ const OurServices = () => {
       animate={inView ? "visible" : "hidden"}
     >
       <div>
-        <motion.h4
-          className='text-[16px] lg:text-2xl mb-2 inline-block mx-auto'
-          style={{
-            backgroundImage: "linear-gradient(135deg, #00A650, #FFC200)",
-            WebkitTextFillColor: "transparent",
-            backgroundClip: "text",
-          }}
-          variants={childVariants}
-        >
+        <motion.h4 className='text-[16px] lg:text-2xl mb-2 inline-block mx-auto gradient-text' variants={childVariants}>
           Our Services
         </motion.h4>
 
@@ -61,13 +56,16 @@ const OurServices = () => {
         <EventProduction />
       </motion.div>
 
-      <motion.button
-        className='min-w-[200px] min-h-[60px] max-w-[300px] max-h-[82px] text-black py-2 px-6 rounded-[15px] text-xl font-bold gradient-background mx-auto mt-5'
-        variants={childVariants}
-        transition={{ delay: staggerDelay * 6, duration: transitionDuration }}
-      >
-        Customize Your Needs
-      </motion.button>
+      <motion.div variants={childVariants} transition={{ delay: staggerDelay * 6, duration: transitionDuration }}>
+        <OppositeGradientButton
+          type='button'
+          className='p-3'
+          text='Customize Your Needs'
+          onClick={() => {
+            navigate("/contact-us");
+          }}
+        />
+      </motion.div>
     </motion.section>
   );
 };

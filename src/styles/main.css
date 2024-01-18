@@ -72,14 +72,14 @@
   
 
   .about-us-background {
-    background-image: url(bg-green-about-us.svg);
+    background-image: url(/public/bg-green-about-us.svg);
     background-size: 1000px;
     background-position: top right;
     background-repeat: no-repeat;
   }
 
   .contact-us-background {
-    background-image: url(leaves-right-lg.svg);
+    background-image: url(/public/leaves-right-lg.svg);
     background-size: 450px;
     background-position: bottom left;
     background-repeat: no-repeat;
@@ -98,7 +98,7 @@
 
   @media screen and (max-width: 768px){
     .contact-us-background {
-      background-image: url(leaves-right.svg);
+      background-image: url(/public/leaves-right.svg);
       background-size: 308px;
       background-position: top right;
       background-repeat: no-repeat;

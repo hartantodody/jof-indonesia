@@ -1,4 +1,5 @@
 import "../../styles/main.css";
+import OppositeGradientButton from "../OppositeGradientButton";
 
 const ContactUs = () => {
   return (
@@ -61,10 +62,14 @@ const ContactUs = () => {
             ></textarea>
           </div>
           <div>
-            {/* Add a button for submitting the form */}
-            <button className='gradient-background w-full rounded-[5px] p-[8px] text-[16px] font-bold' type='submit'>
-              Submit
-            </button>
+            <OppositeGradientButton
+              type='submit'
+              className='w-full p-[5px] text-[16px]'
+              text='Submit'
+              onClick={() => {
+                console.log("data has been submitted");
+              }}
+            />
           </div>
         </form>
       </div>

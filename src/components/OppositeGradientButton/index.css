@@ -1,0 +1,50 @@
+.opposite-btn {
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 5px;
+    background: linear-gradient(to right, #00a650, #ffc200);
+    cursor: pointer;
+  }
+  
+  .opposite-btn::before {
+    transition: 200ms;
+  }
+  
+  .opposite-btn::after {
+    content: "";
+  }
+  
+  .opposite-btn:hover::before {
+    opacity: 10%;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+  }
+  
+  .opposite-btn:hover::after {
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+    border-radius: 4px;
+    z-index: -1;
+    transition: 200ms;
+    background: black;
+  }
+  
+  .opposite-btn:hover .opposite-gradient-text {
+    background: linear-gradient(to right, #00a650, #ffc200);
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
+  .opposite-gradient-text {
+    background: #000;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  
