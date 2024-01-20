@@ -8,10 +8,10 @@ const AboutUsDetails = () => {
       <section className='font-plus-jakarta-sans'>
         <picture>
           <source media='(max-width: 768px)' srcSet={jofTeamSmall} />
-          <img src={jofTeam} alt='Jakarta Oktober Festival Members' className='h-full w-screen pt-[80px]' />
+          <img src={jofTeam} alt='Jakarta Oktober Festival Members' className='h-full w-screen' />
         </picture>
-        <article className='text-title p-5 lg:p-[100px] about-us-background'>
-          <h2 className='text-[10px] lg:text-[24px] mb-10'>About Us</h2>
+        <article className='text-title py-[43px] px-5 lg:p-[100px] about-us-background'>
+          <h2 className='text-[10px] lg:text-[24px] mb-10 bg-'>About Us</h2>
           <h3 className='text-[24px] lg:text-[40px] w-[100%] lg:w-[944px] mb-[100px] text-headline font-reguler'>
             Jakarta Oktober Festival is a Jakarta's premier event organizer that specializes in customization and
             personalization.

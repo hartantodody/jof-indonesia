@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import illustration from "../../assets/images/about-us-illustration.svg";
+import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
+  const navigate = useNavigate();
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.5,
@@ -21,7 +23,10 @@ const AboutUs = () => {
   const transitionDuration = 1.5;
 
   return (
-    <section ref={ref} className='flex flex-col lg:flex-row justify-center items-center mx-auto p-5 lg:p-[109px]'>
+    <section
+      ref={ref}
+      className='flex flex-col lg:flex-row justify-center items-center mx-auto px-5 py-[109px] lg:px-[109px]'
+    >
       <motion.img
         ref={ref}
         initial='hidden'
@@ -49,7 +54,7 @@ const AboutUs = () => {
             ...variants2,
             visible: { ...variants2.visible, transition: { delay: staggerDelay * 2, duration: transitionDuration } },
           }}
-          className='text-[18px] lg:text-3xl text-title max-w-[300px] mb-3'
+          className='text-[18px] lg:text-3xl text-title max-w-[300px] mb-3 font-medium'
         >
           Setting the Standard for Excellence:
         </motion.h4>
@@ -61,7 +66,7 @@ const AboutUs = () => {
             ...variants2,
             visible: { ...variants2.visible, transition: { delay: staggerDelay * 4, duration: transitionDuration } },
           }}
-          className='text-[26px] lg:text-5xl text-headline mb-5'
+          className='text-[26px] lg:text-5xl text-headline mb-5 font-bold'
         >
           Your Event, Our Passion
         </motion.h2>
@@ -79,12 +84,15 @@ const AboutUs = () => {
           is delivered to the maximum satisfactory of our client.
         </motion.p>
         <motion.button
+          onClick={() => {
+            navigate("/portfolio");
+          }}
           ref={ref}
           initial='hidden'
           animate={inView ? "visible" : "hidden"}
           variants={{
             ...variants2,
-            visible: { ...variants2.visible, transition: { delay: staggerDelay * 8, duration: transitionDuration } },
+            visible: { ...variants2.visible, transition: { delay: staggerDelay * 7, duration: transitionDuration } },
           }}
           className='flex py-2 px-6 border border-title text-title bg-transparent hover:bg-title hover:text-black hover:opacity-90 hover:scale-2 transition-all duration-300 focus:outline-none rounded-md'
         >

@@ -11,7 +11,7 @@ const HeroHeader = () => {
       <h4 className='text-[22px] lg:text-[48px] mb-8'>Jakarta's Premier Event Organizer</h4>
       <OppositeGradientButton
         type='button'
-        className='p-5'
+        className='p-5 lg:text-[18px]'
         text='Free Event Consultation'
         onClick={() => {
           window.open("https://linktr.ee/jakartaoktoberfestival", "_blank");

@@ -7,7 +7,7 @@ const OurPartner = () => {
       <section>
         <picture>
           <source media='(max-width: 426px)' srcSet={audioPartnerImgSm} />
-          <img src={audioPartnerImg} alt='TW Audio' />
+          <img className='w-[100%] overflow-hidden bg-cover' src={audioPartnerImg} alt='TW Audio' />
         </picture>
       </section>
     </>

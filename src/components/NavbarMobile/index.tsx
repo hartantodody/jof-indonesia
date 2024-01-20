@@ -1,15 +1,30 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import JofLogo from "../../assets/images/jof-logo.svg";
 import hamburgerButton from "../../assets/images/hamburger-button.svg";
 import closeIcon from "../../assets/images/close-icon.svg";
 
 const NavbarMobile = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 250;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const closeMenu = async () => {
     setIsOpen(false);
@@ -20,6 +35,11 @@ const NavbarMobile = () => {
     if (servicesSection) {
       servicesSection.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const closeMenuLogo = () => {
+    setIsOpen(false);
+    navigate("/");
   };
 
   const mobileNavStyle: React.CSSProperties = {
@@ -33,7 +53,10 @@ const NavbarMobile = () => {
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
-    background: "rgba(0, 5, 3, 1)",
+    background:
+      scrolled || isOpen
+        ? "linear-gradient(to bottom, rgba(0, 5, 3, 1), rgba(0, 5, 3, 1))"
+        : "linear-gradient(to bottom, rgba(0, 5, 3, 1), rgba(0, 5, 3, 0))",
     transition: "height 0.3s ease-out",
   };
 
@@ -47,8 +70,8 @@ const NavbarMobile = () => {
 
   return (
     <nav style={mobileNavStyle}>
-      <div className={`w-[100%] flex items-center justify-between px-2 ${isOpen ? "py-[50px]" : ""}`}>
-        <Link to='/' className='w-[120px] cursor-pointer' onClick={closeMenu}>
+      <div className={`w-[100%] flex items-center justify-between px-[28px] ${isOpen ? "py-[50px]" : ""}`}>
+        <Link to='/' className='w-[120px] cursor-pointer' onClick={closeMenuLogo}>
           <img src={JofLogo} alt='Jof Logo' />
         </Link>
         <img

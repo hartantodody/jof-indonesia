@@ -6,7 +6,7 @@ const PortfolioHero = () => {
     <section>
       <picture>
         <source media='(max-width: 768px)' srcSet={bgHeroSm} />
-        <img src={bgHero} alt='Festival image' className='h-full w-screen pt-[80px]' />
+        <img src={bgHero} alt='Festival image' className='h-full w-screen' />
       </picture>
     </section>
   );

@@ -6,14 +6,16 @@ import unggul from "../../assets/images/portraits/Unggul.webp";
 const OurTeam = () => {
   return (
     <>
-      <section className='flex flex-col text-center py-[100px] py-9'>
+      <section className='flex flex-col text-center lg:py-[100px] py-9'>
         <h2 className='text-[28px] lg:text-[48px] text-headline mb-[56px] lg:mb-[120px]'>Our Team</h2>
         <div className='mx-auto mb-5 lg:mb-[50px]'>
-          <img src={herdy} alt='Herdy Daud Rattu' className='w-[177px] lg:w-[328px] mx-auto mb-9' />
-          <h3 className='text-headline text-[24px] lg:text-[32px]'>Herdy Daud Rattu</h3>
-          <p className='text-subtitle text-[18px] lg:text-[24px] mb-[24px] lg:mb-[80px]'>Operational Director</p>
+          <div className='w-[300px] py-9 flex flex-col items-center bg-cardbg bg-opacity-25 rounded-[10px] lg:bg-transparent'>
+            <img src={herdy} alt='Herdy Daud Rattu' className='w-[177px] lg:w-[328px] mx-auto mb-9' />
+            <h3 className='text-headline text-[24px] lg:text-[32px]'>Herdy Daud Rattu</h3>
+            <p className='text-subtitle text-[18px] lg:text-[24px] mb-[24px] lg:mb-[80px]'>Operational Director</p>
+          </div>
         </div>
-        <div className='flex flex-col lg:flex-row mx-auto gap-9'>
+        <div className='flex flex-col lg:flex-row mx-auto justify-evenly gap-9 lg:gap-0 lg:w-[80svw]'>
           <div className='w-[300px] py-9 flex flex-col items-center bg-cardbg bg-opacity-25 rounded-[10px] lg:bg-transparent'>
             <img src={elsa} alt='Elsa Amelia Titaley' className='w-[130px] lg:w-[241px] mx-auto mb-9' />
             <h3 className='text-headline text-[22px] lg:text-[32px]'>Elsa Amelia Titaley</h3>

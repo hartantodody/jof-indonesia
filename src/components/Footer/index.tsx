@@ -8,8 +8,8 @@ const Footer = () => {
   return (
     <>
       <footer className='w-full bg-[#000000] md:px-[120px] md:py-[142px] py-[36px]'>
-        <div className='flex flex-col justify-between items-center mb-[32px] lg:mb-10 lg:flex-row'>
-          <div className='mb-[24px] lg:mb-[0px]'>
+        <div className='flex flex-col justify-between items-center lg:items-start mb-[32px] lg:mb-10 lg:flex-row'>
+          <div className='mb-[24px] lg:mb-[0px] p-2'>
             <h4 className='text-[14px] lg:text-[19.19px] text-title mb-5 text-center md:text-left'>
               PT Jakarta Oktober Festival Indonesia
             </h4>

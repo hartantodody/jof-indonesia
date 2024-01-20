@@ -28,7 +28,7 @@ const OurServices = () => {
     <motion.section
       id='services'
       ref={ref}
-      className='text-center lg:p-10'
+      className='text-center py-[75px] lg:p-10'
       variants={sectionVariants}
       initial='hidden'
       animate={inView ? "visible" : "hidden"}

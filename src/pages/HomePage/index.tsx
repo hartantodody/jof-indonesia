@@ -6,11 +6,13 @@ const HomePage = () => {
     <>
       <Navbar />
       <Hero />
-      <OurClients />
-      <AboutUs />
-      <AboutUs2 />
-      <OurServices />
-      <LatestWork />
+      <main>
+        <OurClients />
+        <AboutUs />
+        <AboutUs2 />
+        <OurServices />
+        <LatestWork />
+      </main>
       <Footer />
     </>
   );

@@ -28,7 +28,7 @@ const AboutUs2 = () => {
     <>
       <section
         ref={ref}
-        className='bg-black flex flex-col lg:flex-row md:justify-center md:items-center lg:mx-auto py-[150px] px-5 lg:p-[50px]'
+        className='bg-black flex flex-col lg:flex-row md:justify-center md:items-center lg:mx-auto py-[75px] lg:py-[150px] px-5 lg:p-[50px]'
         style={{ backdropFilter: "blur(8px)" }}
       >
         <motion.article
