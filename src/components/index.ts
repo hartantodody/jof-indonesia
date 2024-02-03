@@ -17,3 +17,5 @@ export { default as OurTeam } from "./OurTeam";
 export { default as OurPartner } from "./OurPartner";
 export { default as Portfolio } from "./Portfolio";
 export { default as PortfolioHero } from "./PortfolioHero";
+export { default as CircularLoading } from "./CircularLoading";
+export { default as Modal } from "./Modal";

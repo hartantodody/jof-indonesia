@@ -5,3 +5,9 @@ export interface ImageCarouselProps {
   venue?: string;
   held?: string;
 }
+
+export interface ModalProps {
+  text: string;
+  buttonText: string;
+  handleClose: () => void;
+}

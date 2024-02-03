@@ -84,6 +84,21 @@
     background-position: bottom left;
     background-repeat: no-repeat;
   }
+
+  .modal-background {
+    background-image: url(/public/leaves-right-lg.svg);
+    background-size: 200px;
+    background-position: bottom left;
+    background-repeat: no-repeat;
+  }
+
+  #social-media-logo .hover-effect svg {
+    transition: fill 0.3s ease-in-out;
+  }
+  
+  #social-media-logo a:hover svg{
+    fill: #00a650;
+  }
   
   
   @media screen and (max-width: 1023px) {

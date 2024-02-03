@@ -3,17 +3,18 @@ import instagram from "../../assets/images/instagram.svg";
 import facebook from "../../assets/images/facebook-f.svg";
 import youtube from "../../assets/images/youtube.svg";
 import { Link } from "react-router-dom";
+import "../../styles/main.css";
 
 const Footer = () => {
   return (
     <>
-      <footer className='w-full bg-[#000000] md:px-[120px] md:py-[142px] py-[36px]'>
+      <footer className='w-full bg-[#000000] md:px-[120px] lg:py-[142px] py-[36px]'>
         <div className='flex flex-col justify-between items-center lg:items-start mb-[32px] lg:mb-10 lg:flex-row'>
           <div className='mb-[24px] lg:mb-[0px] p-2'>
-            <h4 className='text-[14px] lg:text-[19.19px] text-title mb-5 text-center md:text-left'>
+            <h4 className='text-[14px] lg:text-[19.19px] text-title mb-5 text-center lg:text-left'>
               PT Jakarta Oktober Festival Indonesia
             </h4>
-            <p className='text-[14px] lg:text-[19.19px]  text-subtitle text-center md:text-left'>
+            <p className='text-[14px] lg:text-[19.19px]  text-subtitle text-center lg:text-left'>
               Jl. Wira Kencana 4 Cilangkap - Cipayung <br />
               East Jakarta 13870 <br />
               Indonesia
@@ -36,33 +37,43 @@ const Footer = () => {
                 Contact
               </Link>
             </div>
-            <div className='flex flex-col px-5'>
-              <p className='text-[14px] lg:text-[19.19px] font-light text-title p-2 text-center md:text-left'>
+            <div id='social-media-logo' className='flex flex-col px-5'>
+              <p className='text-[14px] lg:text-[19.19px] font-light text-title p-2 text-center lg:text-left'>
                 Follow us on
               </p>
               <div className='flex flex-row gap-5 p-2'>
-                <a href='https://id.linkedin.com/company/jofindonesia' target='_blank' rel='noopener noreferrer'>
+                <a
+                  href='https://id.linkedin.com/company/jofindonesia'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='hover-effect'
+                >
                   <img src={linkedIn} alt='Go to our LinkedIn Profile' className='w-[18.73px] lg:w-[24px]' />
                 </a>
-                <a href=' https://www.instagram.com/jofindonesia/' target='_blank' rel='noopener noreferrer'>
+                <a
+                  href=' https://www.instagram.com/jofindonesia/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  className='hover-effect'
+                >
                   <img src={instagram} alt='Go to our Instagram Account' className='w-[18.73px] lg:w-[24px]' />
                 </a>
                 <a
                   href='https://www.facebook.com/people/PT-Jakarta-Oktober-Festival-Indonesia/100085331516207/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='w-[18.73px] lg:w-[24px]'
+                  className='hover-effect'
                 >
                   <img src={facebook} alt='Go to our Facebook Profile' />
                 </a>
                 <a href='https://www.youtube.com/@jofindonesia' target='_blank' rel='noopener noreferrer'>
-                  <img src={youtube} alt='Go to our Youtube Account' className='w-[18.73px] lg:w-[24px]' />
+                  <img src={youtube} className='w-[18.73px] lg:w-[24px]' />
                 </a>
               </div>
             </div>
           </div>
         </div>
-        <p className='text-[12px] text-body w-full text-center md:text-left'>
+        <p className='text-[12px] text-body w-full text-center lg:text-left'>
           ©2024 Jakarta Oktober Festival Indonesia
         </p>
       </footer>

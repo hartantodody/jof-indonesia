@@ -1,9 +1,9 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import "./index.css";
 
 interface OppositeGradientButtonProps {
-  onClick: () => void;
-  text: string;
+  onClick?: () => void;
+  text: string | ReactNode;
   className?: string;
   type: "submit" | "reset" | "button" | undefined;
 }

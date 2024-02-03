@@ -2,7 +2,7 @@ import "./index.css";
 import "../../styles/main.css";
 
 interface OppositeGradientButtonProps {
-  onClick: () => void;
+  onClick?: () => void;
   text: string;
   className?: string;
   type: "submit" | "reset" | "button" | undefined;
